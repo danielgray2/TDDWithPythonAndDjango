@@ -1,0 +1,9 @@
+1530411878164	geckodriver	INFO	geckodriver 0.18.0
+1530411878173	geckodriver	INFO	Listening on 127.0.0.1:63228
+1530411881031	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+Unable to read VR Path Registry from C:\Users\grayd\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\grayd\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\grayd\AppData\Local\openvr\openvrpaths.vrpath
+1530411893083	Marionette	INFO	Listening on port 63242
+1530411893259	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\grayd\AppData\Local\openvr\openvrpaths.vrpath
