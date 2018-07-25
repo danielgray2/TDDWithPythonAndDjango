@@ -83,7 +83,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertRegex(edith_url, "/lists/.+")
 
         self.browser.quit()
-        self.browser = webdriver.Firefox
+        self.browser = webdriver.Firefox()
         self.browser.get(self.live_server_url)
 
         body_text = self.browser.find_element_by_tag_name('body').text
@@ -91,11 +91,12 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertNotIn('1: Buy peacock feathers', body_text)
         self.assertNotIn('2: Use peacock feathers to make a fly', body_text)
 
-        inputbox = wait_for_element_present('id_new_item')
+        inputbox = self.wait_for_element_present('id_new_item')
         inputbox.send_keys('Buy milk')
         inputbox.send_keys(Keys.ENTER)
 
-        check_for_element_in_table('1: Buy milk')
+        table_on_webpage = self.wait_for_element_present('id_list_table')
+        self.check_for_element_in_table('1: Buy milk', table_on_webpage)
         
         dan_url = self.browser.current_url
         self.assertRegex(dan_url, '/lists/.+')
